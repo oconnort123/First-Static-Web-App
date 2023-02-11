@@ -1,18 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>First App</title>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+header {
+  background-image: url(https://wallpapers.com/images/hd/white-aesthetic-iphone-green-hanging-plant-mdnfkemml8tcte8v.jpg); }
+p.solid {border-style: solid;
+        margin: 0px;}
+p.dotted {border-style: dotted;}
+p.none {border-style: none;}
+p.mix1 {border-style: dotted none none none;}
+p.mix2 {border-style: none none dotted none;}
+
+h1{
+  color: #365450;
+  font-family: Sagona Regular; 
+  text-align: left;}
+h4{
+  color: #5a4e35;
+  font-family: Sagona Regular;
+  padding: 6px;
+  text-align: right;}
+h3{
+  font-family: Sagona Regular;
+  text-align: left;}
+</style>
+<style>
+body,h2,h3,h4,h5,h6 {font-family: Sagona Regular}
+</style>
 </head>
+<body class= " w3-content w3-light-grey" style="max-width:1600px">
 
-<body>
-  <main>
-    <h1> I just built my first static web app in Azure!</h1>
-    <p> Hello world
-  </main>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-light-grey w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+
+
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+    
+    
+      <i class="fa fa-remove"></i>
+    </a>
+    <br><br>
+    <h4>PLANET X</h4>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-dark-grey"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
+  </div>
+    <a href="#market" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-dark-grey"><i class="fa fa-th-large fa-fw w3-margin-right"></i>MARKET PLACE</a> 
+  <div class="w3-panel w3-large">
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<script>
+// Script to open and close sidebar
+
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
 </body>
-
 </html>
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  
+  <header id="planet X">
+    <a class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity" ></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-dark-grey"
+    
+    onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    <h1>PLANET X</h1>
+    <h3>16 CO2
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHDB9I4IWvyHzw_lhPUsDrGeE0R-aaoGlV5g&usqp=CAU" style="width:6%">
+    <div class="w3-section w3-padding-0">
+    
+    </div>
+  </header>
+      <p class="solid"></p>
+  <!-- About -->
+
+  <div class="w3-container w3-padding-small" style="margin-bottom:32px; background-color:#cbd2d2" id="about">
+    <h4>ABOUT</h4>
+    <p>Planet X aims to offer a partial solution by installing cheap and easy deployable carbon capture system to counteract CO2 emissions. Once your own carbon capture system is put in place you will earn "CO2s" (our own currency) with every cycle that is completed. You can spend your "CO2s" in our "market place". </p>
+  <p class="solid"></p>
+
+  
+  <!-- First Photo Grid-->
+    
+  <!-- First Photo -->
+  
+  <div class="w3-row-padding" id = "market" style = "background-color:#b1bebd"  >
+   <h4>MARKET PLACE</h4>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <!-- change photo here  -->
+      <img src="https://pluspng.com/img-png/fitbit-png-fitbit-surge-1020.png"  style="width:45%">
+        <!-- change colour here  -->
+      <div class="w3-container dotted">
+        <!-- change text here  -->
+        <p class="mix1"><b> FitBit - 60 CO2s</b></p>
+        <p class="mix2">Want to get into running? Getting a Fitbit is the perfect way to kick start your journey and begin tracking your progress </p>
+      </div>
+    </div>
+    
+<!-- Second Photo-->
+    <div class="w3-third w3-container w3-margin-bottom">
+      <!-- change photo here  -->
+      <img src="https://webstockreview.net/images/flower-pot-png-4.png" style="width:45%">
+        <!-- change colour here  -->
+      <div class="w3-container dotted">
+        <!-- change text here  -->
+        <p class="mix1"><b> House Plant - 40 CO2s </b></p>
+        <p class="mix2"> House Plant from Wilko is an amazing way to spruce up your home and incorporate nature into your home</p>
+      </div>
+    </div>
+<!-- Third Photo--> 
+    <div class="w3-third w3-container w3-margin-bottom">
+      <!-- change photo here  -->
+      <img src="http://www.pngmart.com/files/13/White-Hydro-Flask-PNG-Transparent-Image.png" style="width:45%">
+        <!-- change colour here  -->
+      <div class="w3-container  dotted">
+        <!-- change text here  -->
+        <p class="mix1"><b> HydroFlask - 55 CO2s</b></p>
+        <p class="mix2"> Having a hydroflask allows you to stop spending time making sure your water stays cool and focus on acting cool! </p>
+      </div>
+    </div>
+  </div>
+  

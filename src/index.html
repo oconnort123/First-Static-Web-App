@@ -15,7 +15,63 @@ p.dotted {border-style: dotted;}
 p.none {border-style: none;}
 p.mix1 {border-style: dotted none none none;}
 p.mix2 {border-style: none none dotted none;}
-
+#green-overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: green;
+  opacity: 25%;
+  z-index: 2;
+  cursor: pointer;
+}
+#yellow-overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: yellow;
+  opacity: 25%;
+  z-index: 2;
+  cursor: pointer;
+}
+#blue-overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: blue;
+  opacity: 25%;
+  z-index: 2;
+  cursor: pointer;
+}
+#red-overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red;
+  opacity: 25%;
+  z-index: 2;
+  cursor: pointer;
+}
+  
 h1{
   color: #365450;
   font-family: Sagona Regular; 
@@ -54,8 +110,55 @@ body,h2,h3,h4,h5,h6 {font-family: Sagona Regular}
     <a href="#market" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-dark-grey"><i class="fa fa-th-large fa-fw w3-margin-right"></i>MARKET PLACE</a> 
   <div class="w3-panel w3-large">
   </div>
+  <div id="green-overlay" onclick="off_green()"></div>
+  <div style="padding:20px">
+  <button onclick="on_green()">Turn on green overlay effect</button>
+</div>
+  <div id="yellow-overlay" onclick="off_yellow()"></div>
+  <div style="padding:20px">
+  <button onclick="on_yellow()">Turn on yellow overlay effect</button>
+</div>
+  <div id="red-overlay" onclick="off_red()"></div>
+  <div style="padding:20px">
+  <button onclick="on_red()">Turn on red overlay effect</button>
+</div>
+  <div id="blue-overlay" onclick="off_blue()"></div>
+  <div style="padding:20px">
+  <button onclick="on_blue()">Turn on blue overlay effect</button>
+</div>
 </nav>
+<!-- Overlay effect whole page -->
+<script>
+function on_green() {
+  document.getElementById("green-overlay").style.display = "block";
+}
 
+function off_green() {
+  document.getElementById("green-overlay").style.display = "none";
+}
+  function on_yellow() {
+    document.getElementById("yellow-overlay").style.display = "block";
+  }
+
+  function off_yellow() {
+    document.getElementById("yellow-overlay").style.display = "none";
+  }
+    function on_red() {
+      document.getElementById("red-overlay").style.display = "block";
+    }
+
+    function off_red() {
+      document.getElementById("red-overlay").style.display = "none";
+    }
+
+      function on_blue() {
+        document.getElementById("blue-overlay").style.display = "block";
+      }
+
+      function off_blue() {
+        document.getElementById("blue-overlay").style.display = "none";
+      }
+</script>
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
